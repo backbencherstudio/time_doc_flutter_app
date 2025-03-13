@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+import 'package:time_doc/core/constant/texts.dart';
 import '../../../../core/theme/theme_extensions/color_palette.dart';
 import '../../../common_widgets/button_widget.dart';
 import '../../../provider/login_provider.dart';
@@ -22,30 +23,32 @@ class LoginForm extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Email',
+                AppTexts.email,
                 style: textTheme.bodyMedium!.copyWith(
                   fontWeight: FontWeight.w600,
                 ),
               ),
               SizedBox(height: 10.h),
               TextFormField(
+                controller: loginProvider.emailController,
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.mail_outline_rounded),
-                  hintText: 'Enter your email',
+                  hintText: AppTexts.enterYourEmail,
                 ),
               ),
               SizedBox(height: 24.h),
               Text(
-                'Password ',
+                AppTexts.password,
                 style: textTheme.bodyMedium!.copyWith(
                   fontWeight: FontWeight.w600,
                 ),
               ),
               SizedBox(height: 10.h),
               TextFormField(
+                controller: loginProvider.passwordController,
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.lock_outline),
-                  hintText: 'Enter your password',
+                  hintText: AppTexts.enterYourPassword,
                 ),
               ),
               SizedBox(height: 24.h),
@@ -84,11 +87,11 @@ class LoginForm extends StatelessWidget {
                         ),
                       ),
                       SizedBox(width: 8.w),
-                      Text('Remember me', style: textTheme.bodyMedium),
+                      Text(AppTexts.rememberMe, style: textTheme.bodyMedium),
                     ],
                   ),
                   Text(
-                    'Forgot Password?',
+                    AppTexts.forgetPassword ,
                     style: textTheme.bodyMedium!.copyWith(
                       color: Colors.red,
                     ),
@@ -97,9 +100,9 @@ class LoginForm extends StatelessWidget {
               ),
               SizedBox(height: 48.h),
               ButtonWidget(
-                bgColor: Color(0xffDAE4FF),
+                bgColor: loginProvider.getIsFilledForm?AppColors.primaryColor:Color(0xffDAE4FF),
                 textColor: Color(0xff8A94A6),
-                title: 'Login',
+                title: AppTexts.login,
               ),
             ],
           );

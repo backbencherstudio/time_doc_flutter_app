@@ -16,6 +16,6 @@ class AppTheme {
       brightness: Brightness.light,
       textTheme: AppTextThemes.darkTextTheme,
       scaffoldBackgroundColor: AppColors.darkModeBgColor,
-      inputDecorationTheme:AppInputDecorationTheme.lightInputDecorationTheme
+      inputDecorationTheme:AppInputDecorationTheme.darkInputDecorationTheme
   );
 }

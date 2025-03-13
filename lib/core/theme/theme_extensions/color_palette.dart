@@ -10,4 +10,9 @@ class AppColors{
   static const Color inputDecorationStrokeColor = Color(0xffEDEEF1);
   static const Color inputDecorationHintColor = Color(0xffD7DAE0);
   static const Color iconColorLight = Color(0xffB3B9C6);
+
+  static const Color darkInputDecorationFillColor = Color(0xff0B101C);
+  static const Color darkInputDecorationStrokeColor = Color(0xff24262D);
+  static const Color darkInputDecorationHintColor = Color(0xff565E73);
+  static const Color iconColorDark = Color(0xff363A44);
 }

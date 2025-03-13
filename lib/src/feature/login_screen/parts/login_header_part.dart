@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:time_doc/core/constant/texts.dart';
 class LoginHeaderPart extends StatelessWidget {
   const LoginHeaderPart({
     super.key,
@@ -16,13 +17,13 @@ class LoginHeaderPart extends StatelessWidget {
       children: [
         SizedBox(height: 64.h),
         Text(
-          'Welcome Back!',
+          AppTexts.welcomeBack,
           style: textTheme.titleLarge!.copyWith(
             fontWeight: FontWeight.bold,
           ),
         ),
         Text(
-          'Please enter your login information',
+          AppTexts.pleaseEnterYourLoginInformation,
           style: textTheme.bodyMedium,
         ),
         SizedBox(height: 32.h),
