@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:time_doc/core/route/route_constant.dart';
 import '../../../core/constant/images.dart';
 import '../../../core/constant/texts.dart';
 import '../../../core/theme/theme_extensions/color_palette.dart';
@@ -80,7 +82,14 @@ class OnBoardingScreen extends StatelessWidget {
             bottom: 80,
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.h),
-              child: ButtonWidget(),
+              child: InkWell(
+                onTap: ()=>context.go(RouteConstant.loginScreen),
+                child: ButtonWidget(
+                  bgColor: AppColors.primaryColor,
+                  textColor: AppColors.whiteColor,
+                  title: AppTexts.letsGetStarted,
+                ),
+              ),
             ),
           ),
         ],

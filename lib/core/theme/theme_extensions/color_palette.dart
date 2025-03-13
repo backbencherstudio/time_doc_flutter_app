@@ -7,6 +7,7 @@ class AppColors{
   static const Color darkModeBgColor = Color(0xff101623);
   static const Color blackColor = Color(0xff24262D);
   static const Color inputDecorationFillColor = Color(0xffFDFDFD);
-  static const Color inputDecorationStrokeColor = Color(0xffFDFDFD);
+  static const Color inputDecorationStrokeColor = Color(0xffEDEEF1);
   static const Color inputDecorationHintColor = Color(0xffD7DAE0);
+  static const Color iconColorLight = Color(0xffB3B9C6);
 }

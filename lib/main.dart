@@ -2,13 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:time_doc/core/theme/theme.dart';
+import 'package:time_doc/src/provider/login_provider.dart';
 import 'package:time_doc/src/provider/splash_provider.dart';
 import 'core/route/route_config.dart';
 
 void main() {
   runApp(
     MultiProvider(
-      providers: [ChangeNotifierProvider(create: (_) => SplashProvider())],
+      providers: [
+        ChangeNotifierProvider(create: (_) => SplashProvider()),
+        ChangeNotifierProvider(create: (_) => LoginProvider()),
+      ],
       child: const MyApp(),
     ),
   );
